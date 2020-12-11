@@ -2,11 +2,11 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
     id 'java'
-    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 group = 'net.leonardo_dgs'
-version = '1.5.0'
+version = '1.5.4'
 description = 'Create cool interactive books!'
 
 String mainPackage = project.group + '.' + project.name.toLowerCase()
@@ -14,13 +14,13 @@ String apiVersion = '1.13'
 String author = 'Leonardo_DGS'
 String website = 'https://www.spigotmc.org/resources/45604/'
 
-String spigotVersion = '1.16.1-R0.1-SNAPSHOT'
-String bungeeChatVersion = '1.16-R0.1'
+String spigotVersion = '1.16.4-R0.1-SNAPSHOT'
+String bungeeChatVersion = '1.16-R0.3'
 String lombokVersion = '1.18.12'
 String acfVersion = '0.5.0-SNAPSHOT'
-String bStatsVersion = '1.5'
-String papiVersion = '2.10.6'
-String nbtApiVersion = '2.4.1'
+String bStatsVersion = '1.7'
+String papiVersion = '2.10.9'
+String nbtApiVersion = '2.6.0'
 
 tasks.compileJava.sourceCompatibility = 1.8
 tasks.compileJava.targetCompatibility = 1.8
@@ -78,8 +78,4 @@ compileJava {
 
 artifacts {
     archives shadowJar
-}
-
-configurations.all {
-    transitive = false
 }
